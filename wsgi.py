@@ -6,7 +6,7 @@ app.config['MYSQL_HOST'] = 'jdbc:mysql://mysql.gamification.svc.cluster.local:33
 app.config['MYSQL_USER'] = 'xxuser'
 app.config['MYSQL_PASSWORD'] = 'welcome1'
 app.config['MYSQL_DB']= 'sampledb'
-
+mysql = MySQL(app)
 @app.route('/')
 def employees():
 	cur = mysql.connection.cursor()
