@@ -7,7 +7,7 @@ app.config['MYSQL_USER'] = 'xxuser'
 app.config['MYSQL_PASSWORD'] = 'welcome1'
 app.config['MYSQL_DB']= 'sampledb'
 mysql = MySQL(app)
-@app.route('/')
+@app.route('/style')
 def employees():
 	cur = mysql.connection.cursor()
 	res = cur.execute("SELECT ITEM_NUMBER, DESCRIPTION, LONG_DESCRIPTION FROM sampledb.XXIBM_PRODUCT_STYLE LIMIT 10")
