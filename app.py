@@ -19,8 +19,12 @@ mysql.init_app(app)
 #app.config["MYSQL_DB"]= 'sampledb'
 #mysql = MySQL(app)
 
-@app.route('/', methods=['GET'])
-def employees():
+@app.route('/')
+def main():
+    return render_template('index.html')
+
+@app.route('/products')
+def products():
 	conn = mysql.connect()
 	cur = conn.cursor()
 	res = cur.execute("SELECT ITEM_NUMBER, DESCRIPTION, LONG_DESCRIPTION FROM sampledb.XXIBM_PRODUCT_STYLE")
