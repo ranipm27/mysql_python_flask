@@ -31,6 +31,9 @@ def products():
 	if len(res) > 0:
 		userDetails = cur.fetchall()
 		return render_template('employee.html',userDetails=userDetails)
+	cur.close()
+	conn.close()
+				       
 		
 if __name__ == "__main__":
     app.run(port=8080)
