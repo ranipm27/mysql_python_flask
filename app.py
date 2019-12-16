@@ -18,10 +18,6 @@ def employees():
 	if res > 0:
 		userDetails = cur.fetchall()
 		return render_template('employee.html',userDetails=userDetails)
-	else
-		return '''<h1>Database Information Missing</h1>
-<p>A prototype API </p>'''
-	
 		
 if __name__ == "__main__":
     app.run()
